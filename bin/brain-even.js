@@ -13,13 +13,14 @@ const isEven = (systemNumber, answerUser) => {
   if (result === answerUser) {
     answer = 'Correct!';
   } else {
-    answer = `'${answerUser}' is wrong answer ;(. Correct answer was '${result}'. \n Let's try again, Bill!`;
+    answer = `'${answerUser}' is wrong answer ;(. Correct answer was '${result}'.`;
   }
   return answer;
 };
 
 console.log('Welcome to the Brain Games!');
-sayHello();
+const userName = sayHello();
+console.log(`Hello, ${userName}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 for (let i = 0; i < 3; i += 1) {
@@ -30,9 +31,10 @@ for (let i = 0; i < 3; i += 1) {
     console.log(isEven(number, answerUser));
   } else {
     console.log(isEven(number, answerUser));
+    console.log(`Let's try again, ${userName}!`);
     break;
   }
   if (i === 2) {
-    console.log('Congratulations, Bill!');
+    console.log(`Congratulations, ${userName}!`);
   }
 }
