@@ -83,6 +83,25 @@ const sayWelcome = () => {
   return userName;
 };
 
+const isCalc = (firstNum, secondNum, arrOperation) => {
+  let calc;
+  switch (arrOperation) {
+    case '+':
+      calc = firstNum + secondNum;
+      break;
+    case '-':
+      calc = firstNum - secondNum;
+      break;
+    case '*':
+      calc = firstNum * secondNum;
+      break;
+    default:
+      calc = 'error';
+  }
+  return calc.toString();
+};
+
 export {
-  getNumber, printAnswer, genArrOperation, hasNod, generateArr, getAnswer, printResult, sayWelcome,
+  getNumber, printAnswer, genArrOperation, hasNod, generateArr, getAnswer, printResult,
+  sayWelcome, isCalc,
 };
