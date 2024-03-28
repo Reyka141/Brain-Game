@@ -1,23 +1,21 @@
-import readlineSync from 'readline-sync';
-import { getNumber, printAnswer } from '../index.js';
+import {
+  getNumber, printAnswer, getAnswer, printResult, sayWelcome,
+} from '../index.js';
 
-const isEven = (systemNumber, userAnswer) => {
+const isEven = (systemNumber) => {
   const systemAnswer = (systemNumber % 2 === 0) ? 'yes' : 'no';
-  const answer = printAnswer(systemAnswer, userAnswer);
-  return answer;
+  return systemAnswer;
 };
 
-const evenGame = (userName) => {
+const evenGame = () => {
+  const userName = sayWelcome();
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
-    const number = getNumber();
-    console.log(`Question: ${number}`);
-    const userAnswer = readlineSync.question('Your answer: ');
-    const result = isEven(number, userAnswer);
-    if (result === 'Correct!') {
-      console.log(result);
-    } else {
-      console.log(result);
-      console.log(`Let's try again, ${userName}!`);
+    const question = getNumber();
+    const systemAnswer = isEven(question);
+    const userAnswer = getAnswer(question);
+    const result = printAnswer(systemAnswer, userAnswer);
+    if (printResult(result, userName) === false) {
       break;
     }
     if (i === 2) {
