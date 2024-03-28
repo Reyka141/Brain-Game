@@ -1,5 +1,5 @@
 import {
-  getNumber, printAnswer, generateArr, getAmswer, printResult, sayWelcome,
+  getNumber, printAnswer, generateArr, getAnswer, printResult, sayWelcome,
 } from '../index.js';
 
 const hideOneIndexOfArr = (arr, index) => {
@@ -15,7 +15,7 @@ const progressionGame = () => {
     const arrOperation = generateArr();
     const indexOfArr = getNumber(0, arrOperation.length - 1);
     const question = hideOneIndexOfArr(arrOperation, indexOfArr);
-    const userAnswer = getAmswer(question.join(' '));
+    const userAnswer = getAnswer(question.join(' '));
     const result = printAnswer(arrOperation[indexOfArr], userAnswer);
     if (printResult(result, userName) === false) {
       break;

@@ -59,7 +59,7 @@ const generateArr = () => {
   return arr;
 };
 
-const getAmswer = (question) => {
+const getAnswer = (question) => {
   console.log(`Question: ${question}`);
   const userAnswer = readlineSync.question('Your answer: ');
   return userAnswer;
@@ -84,5 +84,5 @@ const sayWelcome = () => {
 };
 
 export {
-  getNumber, printAnswer, genArrOperation, hasNod, generateArr, getAmswer, printResult, sayWelcome,
+  getNumber, printAnswer, genArrOperation, hasNod, generateArr, getAnswer, printResult, sayWelcome,
 };
