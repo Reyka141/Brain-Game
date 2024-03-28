@@ -12,3 +12,6 @@ publish: #Публикация пакета
 
 lint:	#Проверка линтером
 	npx eslint .
+
+link: # Установка пакета
+	npm link
