@@ -6,8 +6,11 @@
 ### Video with install and play brain-even game
 [![asciicast](https://asciinema.org/a/Ek5Be7ZNxaGsxbsNCnkxxzJP9.svg)](https://asciinema.org/a/Ek5Be7ZNxaGsxbsNCnkxxzJP9)
 
-### Video with install and play brain-calc game
+### Video with play brain-calc game
 [![asciicast](https://asciinema.org/a/hvMjQtVoe0lkeBXwhY7RHg8TN.svg)](https://asciinema.org/a/hvMjQtVoe0lkeBXwhY7RHg8TN)
 
-### Video with install and play brain-gcd game
+### Video with play brain-gcd game
 [![asciicast](https://asciinema.org/a/62TqTFsmvOz8LSGceGHtahi3S.svg)](https://asciinema.org/a/62TqTFsmvOz8LSGceGHtahi3S)
+
+### Video with play brain-progression game
+[![asciicast](https://asciinema.org/a/wcvxBf1k6T4msow9adnm2Vgs8.svg)](https://asciinema.org/a/wcvxBf1k6T4msow9adnm2Vgs8)
