@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import sayHello from '../src/cli.js';
-import evenGame from '../src/even-number.js';
+import evenGame from '../src/even-game.js';
 
 console.log('Welcome to the Brain Games!');
 const userName = sayHello();
