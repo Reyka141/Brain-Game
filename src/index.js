@@ -26,4 +26,24 @@ const genArrOperation = () => {
   }
   return arr;
 };
-export { getNumber, printAnswer, genArrOperation };
+
+const hasNod = (firstNum, secondNum) => {
+  let minNum;
+  const arrOfDivider = [];
+  if (firstNum < secondNum) {
+    minNum = firstNum;
+  } else {
+    minNum = secondNum;
+  }
+  for (let i = 1; i <= minNum; i += 1) {
+    if (firstNum % i === 0 && secondNum % i === 0) {
+      arrOfDivider.push(i);
+    }
+  }
+  const maxOfDivider = arrOfDivider.pop().toString();
+  return maxOfDivider;
+};
+
+export {
+  getNumber, printAnswer, genArrOperation, hasNod,
+};
