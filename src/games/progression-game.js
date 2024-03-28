@@ -1,12 +1,6 @@
 import {
-  getNumber, printAnswer, generateArr, getAnswer, printResult, sayWelcome,
+  getNumber, printAnswer, generateArr, getAnswer, printResult, sayWelcome, hideOneIndexOfArr,
 } from '../index.js';
-
-const hideOneIndexOfArr = (arr, index) => {
-  const retultArr = [...arr];
-  retultArr[index] = '..';
-  return retultArr;
-};
 
 const progressionGame = () => {
   const userName = sayWelcome();
