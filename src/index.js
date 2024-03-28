@@ -101,7 +101,18 @@ const isCalc = (firstNum, secondNum, arrOperation) => {
   return calc.toString();
 };
 
+const isEven = (systemNumber) => {
+  const systemAnswer = (systemNumber % 2 === 0) ? 'yes' : 'no';
+  return systemAnswer;
+};
+
+const hideOneIndexOfArr = (arr, index) => {
+  const retultArr = [...arr];
+  retultArr[index] = '..';
+  return retultArr;
+};
+
 export {
   getNumber, printAnswer, genArrOperation, hasNod, generateArr, getAnswer, printResult,
-  sayWelcome, isCalc,
+  sayWelcome, isCalc, isEven, hideOneIndexOfArr,
 };
