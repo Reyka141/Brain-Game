@@ -1,5 +1,8 @@
-const getNumber = () => {
-  const generateNumForGame = Math.floor(Math.random() * 100) + 1;
+import readlineSync from 'readline-sync';
+import sayHello from './cli.js';
+
+const getNumber = (minNum = 1, maxNum = 100) => {
+  const generateNumForGame = Math.floor(Math.random() * maxNum) + minNum;
   return generateNumForGame;
 };
 
@@ -44,6 +47,42 @@ const hasNod = (firstNum, secondNum) => {
   return maxOfDivider;
 };
 
+const generateArr = () => {
+  const lengthOfArr = getNumber(5, 12);
+  const progression = getNumber(2, 10);
+  let startNum = getNumber(1, 50);
+  const arr = [startNum.toString()];
+  for (let i = 1; i < lengthOfArr; i += 1) {
+    startNum += progression;
+    arr.push(startNum.toString());
+  }
+  return arr;
+};
+
+const getAmswer = (question) => {
+  console.log(`Question: ${question}`);
+  const userAnswer = readlineSync.question('Your answer: ');
+  return userAnswer;
+};
+
+const printResult = (result, userName) => {
+  if (result === 'Correct!') {
+    console.log(result);
+  } else {
+    console.log(result);
+    console.log(`Let's try again, ${userName}!`);
+    return false;
+  }
+  return true;
+};
+
+const sayWelcome = () => {
+  console.log('Welcome to the Brain Games!');
+  const userName = sayHello();
+  console.log(`Hello, ${userName}!`);
+  return userName;
+};
+
 export {
-  getNumber, printAnswer, genArrOperation, hasNod,
+  getNumber, printAnswer, genArrOperation, hasNod, generateArr, getAmswer, printResult, sayWelcome,
 };
