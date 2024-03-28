@@ -8,3 +8,6 @@
 
 ### Video with install and play brain-calc game
 [![asciicast](https://asciinema.org/a/hvMjQtVoe0lkeBXwhY7RHg8TN.svg)](https://asciinema.org/a/hvMjQtVoe0lkeBXwhY7RHg8TN)
+
+### Video with install and play brain-gcd game
+[![asciicast](https://asciinema.org/a/62TqTFsmvOz8LSGceGHtahi3S.svg)](https://asciinema.org/a/62TqTFsmvOz8LSGceGHtahi3S)
