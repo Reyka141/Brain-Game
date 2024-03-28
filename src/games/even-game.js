@@ -1,11 +1,6 @@
 import {
-  getNumber, printAnswer, getAnswer, printResult, sayWelcome,
+  getNumber, printAnswer, getAnswer, printResult, sayWelcome, isEven,
 } from '../index.js';
-
-const isEven = (systemNumber) => {
-  const systemAnswer = (systemNumber % 2 === 0) ? 'yes' : 'no';
-  return systemAnswer;
-};
 
 const evenGame = () => {
   const userName = sayWelcome();
