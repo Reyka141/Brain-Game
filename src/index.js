@@ -112,7 +112,19 @@ const hideOneIndexOfArr = (arr, index) => {
   return retultArr;
 };
 
+const isPrime = (num) => {
+  let temp = true;
+  for (let i = 2; i < (num / 2); i += 1) {
+    if (num % i === 0) {
+      temp = false;
+      break;
+    }
+  }
+  const result = (temp === true) ? 'yes' : 'no';
+  return result;
+};
+
 export {
   getNumber, printAnswer, genArrOperation, hasNod, generateArr, getAnswer, printResult,
-  sayWelcome, isCalc, isEven, hideOneIndexOfArr,
+  sayWelcome, isCalc, isEven, hideOneIndexOfArr, isPrime,
 };

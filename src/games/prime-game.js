@@ -1,18 +1,7 @@
 import {
-  getNumber, printAnswer, getAnswer, printResult, sayWelcome,
+  getNumber, printAnswer, getAnswer, printResult, sayWelcome, isPrime,
 } from '../index.js';
 
-const isPrime = (num) => {
-  let temp = true;
-  for (let i = 2; i < (num / 2); i += 1) {
-    if (num % i === 0) {
-      temp = false;
-      break;
-    }
-  }
-  const result = (temp === true) ? 'yes' : 'no';
-  return result;
-};
 const primeGame = () => {
   const userName = sayWelcome();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
