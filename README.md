@@ -14,3 +14,6 @@
 
 ### Video with play brain-progression game
 [![asciicast](https://asciinema.org/a/wcvxBf1k6T4msow9adnm2Vgs8.svg)](https://asciinema.org/a/wcvxBf1k6T4msow9adnm2Vgs8)
+
+### Video with play brain-prime game
+[![asciicast](https://asciinema.org/a/9eCBfR6btVhNOcyEgFQ5UdfGZ.svg)](https://asciinema.org/a/9eCBfR6btVhNOcyEgFQ5UdfGZ)
