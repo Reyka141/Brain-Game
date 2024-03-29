@@ -79,7 +79,6 @@ const printResult = (result, userName) => {
 const sayWelcome = () => {
   console.log('Welcome to the Brain Games!');
   const userName = sayHello();
-  console.log(`Hello, ${userName}!`);
   return userName;
 };
 
