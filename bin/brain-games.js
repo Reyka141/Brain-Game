@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import sayHello from '../src/cli.js';
+import { sayWelcome } from '../src/index.js';
 
-console.log('Welcome to the Brain Games!');
-sayHello();
+sayWelcome();
