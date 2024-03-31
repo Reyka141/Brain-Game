@@ -1,3 +1,19 @@
+# Project-Brain-Game 
+
+## Description
+A console game that will make you think. 
+There are 5 games available in the project, namely: 
+even game, calc game, gcd game, progression game, prime game.
+How to play is shown in the video below.
+
+
+## Setup
+
+```bash
+npm link
+```
+
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Reyka141/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Reyka141/frontend-project-44/actions)
 
