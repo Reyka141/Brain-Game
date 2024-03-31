@@ -4,7 +4,7 @@
 A console game that will make you think. 
 There are 5 games available in the project, namely: 
 even game, calc game, gcd game, progression game, prime game.
-How to play is shown in the video below.
+How to play is shown in the videos below.
 
 
 ## Setup
