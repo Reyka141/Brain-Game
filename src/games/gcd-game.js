@@ -1,7 +1,10 @@
 import startGame from '../index.js';
 import getNumber from '../gen-num.js';
 
-const hasNod = (firstNum, secondNum) => {
+const hasNod = (question) => {
+  const arrFromquest = question.split(' ');
+  const firstNum = Number(arrFromquest[0]);
+  const secondNum = Number(arrFromquest[1]);
   let minNum;
   const arrOfDivider = [];
   if (firstNum < secondNum) {
@@ -18,24 +21,16 @@ const hasNod = (firstNum, secondNum) => {
   return maxOfDivider;
 };
 
-const generateQuestionForGcdGame = () => {
+const genGcdQuestion = () => {
   const firstNum = getNumber();
   const secondNum = getNumber();
   const question = (`${firstNum} ${secondNum}`);
   return question;
 };
 
-const createSysAnswerForGcdGame = (question) => {
-  const arrFromquest = question.split(' ');
-  const firstNum = Number(arrFromquest[0]);
-  const secondNum = Number(arrFromquest[1]);
-  const result = hasNod(firstNum, secondNum);
-  return result;
-};
-
 const startGcdGame = () => {
   const description = 'Find the greatest common divisor of given numbers.';
-  startGame(description, generateQuestionForGcdGame, createSysAnswerForGcdGame);
+  startGame(description, genGcdQuestion, hasNod);
 };
 
 export default startGcdGame;
