@@ -1,15 +1,12 @@
 import startGame from '../index.js';
 import getNumber from '../gen-num.js';
 
-const genOperation = () => {
-  const operations = ['+', '-', '*'];
-  const randomOperation = operations[getNumber(0, 3)];
-  return randomOperation;
-};
-
-const isCalc = (firstNum, secondNum, arrOperation) => {
+const calcNum = (question) => {
   let calc;
-  switch (arrOperation) {
+  const arrFromquest = question.split(' ');
+  const firstNum = Number(arrFromquest[0]);
+  const secondNum = Number(arrFromquest[2]);
+  switch (arrFromquest[1]) {
     case '+':
       calc = firstNum + secondNum;
       break;
@@ -25,22 +22,15 @@ const isCalc = (firstNum, secondNum, arrOperation) => {
 const genCalcQuestion = () => {
   const firstNum = getNumber();
   const secondNum = getNumber();
-  const currentOperation = genOperation();
+  const operations = ['+', '-', '*'];
+  const currentOperation = operations[getNumber(0, 3)];
   const question = (`${firstNum} ${currentOperation} ${secondNum}`);
   return question;
 };
 
-const createSysAnswerForCalcGame = (question) => {
-  const arrFromquest = question.split(' ');
-  const firstNum = Number(arrFromquest[0]);
-  const secondNum = Number(arrFromquest[2]);
-  const result = isCalc(firstNum, secondNum, arrFromquest[1]);
-  return result;
-};
-
 const startCalcGame = () => {
   const description = 'What is the result of the expression?';
-  startGame(description, genCalcQuestion, createSysAnswerForCalcGame);
+  startGame(description, genCalcQuestion, calcNum);
 };
 
 export default startCalcGame;
