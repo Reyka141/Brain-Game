@@ -1,10 +1,14 @@
-import {
-  getNumber, isEven, startGame,
-} from '../index.js';
+import startGame from '../index.js';
+import getNumber from '../gen-num.js';
 
-const evenGame = () => {
+const isEven = (systemNumber) => {
+  const systemAnswer = (systemNumber % 2 === 0) ? 'yes' : 'no';
+  return systemAnswer;
+};
+
+const startEvenGame = () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
   startGame(description, getNumber, isEven);
 };
 
-export default evenGame;
+export default startEvenGame;
