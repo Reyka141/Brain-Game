@@ -1,6 +1,6 @@
 const getNumber = (minNum = 1, maxNum = 100) => {
-  const generateNumForGame = Math.floor(Math.random() * maxNum) + minNum;
-  return generateNumForGame;
+  const numForGame = Math.floor(Math.random() * maxNum) + minNum;
+  return numForGame;
 };
 
 export default getNumber;
