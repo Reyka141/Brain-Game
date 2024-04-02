@@ -6,9 +6,15 @@ const hasEven = (systemNumber) => {
   return systemAnswer;
 };
 
+const genEvenQuestion = () => {
+  const question = getNumber();
+  const answer = hasEven(question);
+  return [question, answer];
+};
+
 const startEvenGame = () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-  startGame(description, getNumber, hasEven);
+  startGame(description, genEvenQuestion);
 };
 
 export default startEvenGame;
