@@ -11,29 +11,15 @@ const genProgresQuestion = () => {
     arrOperation.push(startNum);
   }
   const index = getNumber(0, arrOperation.length - 1);
+  const answer = arrOperation[index].toString();
   arrOperation[index] = '..';
-  return arrOperation.join(' ');
-};
-
-const calcProgresNum = (question) => {
-  const arrFromquest = question.split(' ');
-  const indexHide = arrFromquest.indexOf('..');
-  let progression;
-  let result;
-  if (indexHide >= arrFromquest.length - 2) {
-    progression = Number(arrFromquest[indexHide - 1]) - Number(arrFromquest[indexHide - 2]);
-    result = Number(arrFromquest[indexHide - 1]) + progression;
-  } else {
-    progression = Number(arrFromquest[indexHide + 2]) - Number(arrFromquest[indexHide + 1]);
-    result = Number(arrFromquest[indexHide + 1]) - progression;
-  }
-
-  return result.toString();
+  const question = arrOperation.join(' ');
+  return [question, answer];
 };
 
 const startProgressionGame = () => {
   const description = 'What number is missing in the progression?';
-  startGame(description, genProgresQuestion, calcProgresNum);
+  startGame(description, genProgresQuestion);
 };
 
 export default startProgressionGame;
