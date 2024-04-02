@@ -1,7 +1,7 @@
 import startGame from '../index.js';
 import getNumber from '../gen-num.js';
 
-export const hasPrime = (num) => {
+const hasPrime = (num) => {
   let temp = true;
   for (let i = 2; i < (num / 2); i += 1) {
     if (num % i === 0) {
@@ -13,9 +13,15 @@ export const hasPrime = (num) => {
   return result;
 };
 
+const genPrimeQuestion = () => {
+  const question = getNumber();
+  const answer = hasPrime(question);
+  return [question, answer];
+};
+
 const startPrimeGame = () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  startGame(description, getNumber, hasPrime);
+  startGame(description, genPrimeQuestion);
 };
 
 export default startPrimeGame;
