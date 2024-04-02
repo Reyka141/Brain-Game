@@ -1,12 +1,9 @@
 import startGame from '../index.js';
 import getNumber from '../gen-num.js';
 
-const calcNum = (question) => {
+const calcNum = (firstNum, secondNum, currentOperation) => {
   let calc;
-  const arrFromquest = question.split(' ');
-  const firstNum = Number(arrFromquest[0]);
-  const secondNum = Number(arrFromquest[2]);
-  switch (arrFromquest[1]) {
+  switch (currentOperation) {
     case '+':
       calc = firstNum + secondNum;
       break;
@@ -25,12 +22,13 @@ const genCalcQuestion = () => {
   const operations = ['+', '-', '*'];
   const currentOperation = operations[getNumber(0, 3)];
   const question = (`${firstNum} ${currentOperation} ${secondNum}`);
-  return question;
+  const answer = calcNum(firstNum, secondNum, currentOperation);
+  return [question, answer];
 };
 
 const startCalcGame = () => {
   const description = 'What is the result of the expression?';
-  startGame(description, genCalcQuestion, calcNum);
+  startGame(description, genCalcQuestion);
 };
 
 export default startCalcGame;
